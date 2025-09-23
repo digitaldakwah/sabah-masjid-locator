@@ -1,0 +1,174 @@
+{
+  "folders": [
+    {
+      "name": "Sabah Masjid Locator",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "php.validate.executablePath": "/usr/bin/php",
+    "php.suggest.basic": false,
+    "php.format.enable": true,
+    "eslint.enable": true,
+    "eslint.workingDirectories": ["."],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "files.associations": {
+      "*.php": "php",
+      "*.vue": "vue",
+      "*.js": "javascript"
+    },
+    "emmet.includeLanguages": {
+      "vue-html": "html",
+      "vue": "html"
+    },
+    "vetur.validation.template": true,
+    "vetur.validation.script": true,
+    "vetur.validation.style": true,
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/vendor": true,
+      "**/dist": true,
+      "**/build": true
+    },
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/vendor": true,
+      "**/.git": true,
+      "**/.DS_Store": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "bmewburn.vscode-intelephense-client",
+      "ms-vscode.vscode-typescript-next",
+      "octref.vetur",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss",
+      "ms-vscode.vscode-json",
+      "formulahendry.auto-rename-tag",
+      "christian-kohler.path-intellisense",
+      "ms-vscode.sublime-keybindings"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Install Dependencies",
+        "type": "shell",
+        "command": "npm install",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Build Development",
+        "type": "shell",
+        "command": "npm run dev",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Build Production",
+        "type": "shell",
+        "command": "npm run build",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Watch Development",
+        "type": "shell",
+        "command": "npm run watch",
+        "group": "build",
+        "isBackground": true,
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Lint JavaScript",
+        "type": "shell",
+        "command": "npm run lint",
+        "group": "test",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Lint CSS",
+        "type": "shell",
+        "command": "npm run stylelint",
+        "group": "test",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Package App",
+        "type": "shell",
+        "command": "tar -czf sabah-masjid-locator.tar.gz --exclude='node_modules' --exclude='.git' --exclude='*.tar.gz' .",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Listen for XDebug",
+        "type": "php",
+        "request": "launch",
+        "port": 9003,
+        "pathMappings": {
+          "/var/www/nextcloud/apps/sabah_masjid_locator": "${workspaceFolder}"
+        }
+      },
+      {
+        "name": "Launch Chrome against localhost",
+        "type": "chrome",
+        "request": "launch",
+        "url": "https://cloud.digitaldakwah.org/apps/sabah_masjid_locator",
+        "webRoot": "${workspaceFolder}/src"
+      }
+    ]
+  }
+}

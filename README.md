@@ -1,10 +1,14 @@
-# Nextcloud Maps
+# 🕌 Sabah Masjid Locator
 
-**With MapLibre-GL support**
+**Islamic Centers & Qiblat Direction for the Land Below the Wind**
 
-**🌍🌏🌎 The whole world fits inside your cloud!**
+![Sabah Masjid Locator](https://img.shields.io/badge/Sabah-Masjid%20Locator-green?style=for-the-badge&logo=mosque)
+![Digital Dakwah Platform](https://img.shields.io/badge/Digital-Dakwah%20Platform-blue?style=for-the-badge)
+![Nextcloud App](https://img.shields.io/badge/Nextcloud-App-orange?style=for-the-badge)
 
-![](screenshots/screenshot1.png)
+## � Overview
+
+Sabah Masjid Locator is a specialized Nextcloud app designed for the Muslim community in Sabah, Malaysia. Built on the foundation of the Maps app, it provides comprehensive Islamic location services including mosque directories, Qiblat direction, and prayer time calculations.
 
 - **🗺 Beautiful map:** Using [OpenStreetMap](https://www.openstreetmap.org) and [Leaflet](https://leafletjs.com), you can choose between standard map, satellite, topographical, dark mode or even watercolor! 🎨
 - **⭐ Favorites:** Save your favorite places, privately! Sync with [GNOME Maps](https://github.com/nextcloud/maps/issues/30) and mobile apps is planned.
